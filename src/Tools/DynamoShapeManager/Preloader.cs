@@ -89,7 +89,9 @@ namespace DynamoShapeManager
 
             shapeManagerPath = string.Empty; // Folder that contains ASM binaries.
             version = Utilities.GetInstalledAsmVersion(versionList, ref shapeManagerPath, rootFolder);
-            
+
+            //version = LibraryVersion.Version220;
+            //shapeManagerPath = "D:\\Program Files\\Autodesk\\Revit 2016\\";
             var libGFolderName = string.Format("libg_{0}", ((int) version));
             preloaderLocation = Path.Combine(rootFolder, libGFolderName);
             geometryFactoryPath = Path.Combine(preloaderLocation,
